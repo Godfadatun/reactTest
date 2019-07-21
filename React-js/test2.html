@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test2-React</title>
+    <link rel="stylesheet" href="test.css">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> 
+    <!-- This dude above creates the component -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- This dude above renders the react component -->
+    <!-- <script src="https://unpkg.com/react-dom-factories@1.0.2/index.js"></script> -->
+    <!-- This dude above creates the react element -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- This dude above jsx to vanilla js -->
+</head>
+<body>
+    <div id="app"></div>
+    <!-- code without jsx -->
+    <script type="text/babel">
+        class random extends React.Component {
+            render() {
+                const divColor = "#" + Math.random().toString().slice(2,8);
+                const ftSize = Math.random().toString().slice(2,4) + 'px';
+                return (
+                    <div className="card" style={{
+                        backgroundColor: divColor
+                    }}>
+                        <h3 style={{
+                            fontSize: ftSize,
+                            color: 'white'
+                        }}>Random Box </h3>
+                    </div>
+                );
+            }
+        }  
+
+        ReactDOM.render(React.createElement(random), document.getElementById('app'));
+    </script>
+    
+</body>
+<!-- <script type="text/javascript">
+    class pet extends React.Component {
+        render() {
+            const h2 = ReactDOMFactories.h2(null, "Sup World")
+            const img = ReactDOMFactories.img({
+                src : "assets/img3.jpeg",
+                alt : "Girl with coin"
+            })
+            return ReactDOMFactories.div(null, h2, img);
+        }
+    }
+
+    ReactDOM.render(React.createElement(pet), document.getElementById('app'))
+</script> -->
+
+
+</html>
+

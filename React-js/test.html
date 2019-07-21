@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test2-React</title>
+    <link rel="stylesheet" href="test.css">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> 
+    <!-- This dude above creates the component -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <!-- This dude above renders the react component -->
+    <!-- <script src="https://unpkg.com/react-dom-factories@1.0.2/index.js"></script> -->
+    <!-- This dude above creates the react element -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- This dude above jsx to vanilla js -->
+</head>
+<body>
+    <div id="app"></div>
+    <!-- code without jsx -->
+    <script type="text/babel">
+        class pet extends React.Component {
+            render() {
+                const liStyle = {fontSize : '1.5em'};
+                const list = [
+                    'Sex',
+                    'Anime',
+                    'Coding',
+                    'Eating',
+                    'cooking to Eat',
+                    'Researching new technology',
+                    'Social Media',
+                ]
+                return (
+                    <div className="card">
+                        <h2 className="name">Sup World</h2>
+                        <img src = "assets/img3.jpeg"
+                             alt = "Girl with coin"
+                        />
+                        <h5 style = {{
+                            fontSize: '2em', 
+                            margin:"2px"
+                            }}
+                        >Hobbis: </h5>
+                        {5 + 5} 
+                        <br/>
+                        {'green ' + 'brown'}
+                        <ul>
+                            <li style = {liStyle}>Sex</li>
+                            <li style = {liStyle}>Anime</li>
+                            <li style = {liStyle}>Coding</li>
+                            <li style = {liStyle}>Eating</li>
+                            <li style = {liStyle}>cooking to Eat</li>
+                            <li style = {liStyle}>Researching new technology</li>
+                            <li style = {liStyle}>Social Media</li>
+                        </ul>
+                    </div>
+                );
+            }
+        }  
+
+        ReactDOM.render(React.createElement(pet), document.getElementById('app'));
+    </script>
+    
+</body>
+<!-- <script type="text/javascript">
+    class pet extends React.Component {
+        render() {
+            const h2 = ReactDOMFactories.h2(null, "Sup World")
+            const img = ReactDOMFactories.img({
+                src : "assets/img3.jpeg",
+                alt : "Girl with coin"
+            })
+            return ReactDOMFactories.div(null, h2, img);
+        }
+    }
+
+    ReactDOM.render(React.createElement(pet), document.getElementById('app'))
+</script> -->
+
+
+</html>
+
