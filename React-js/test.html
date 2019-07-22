@@ -19,9 +19,9 @@
     <div id="app"></div>
     <!-- code without jsx -->
     <script type="text/babel">
-        class pet extends React.Component {
+        
+        class Hobbies extends React.Component {
             render() {
-                const liStyle = {fontSize : '1.5em'};
                 const list = [
                     'Sex',
                     'Anime',
@@ -31,6 +31,18 @@
                     'Researching new technology',
                     'Social Media',
                 ]
+                const liStyle = {fontSize : '1.5em'};
+                return (
+                    <ul>
+                        {list.map((l, i) => {
+                            return <li key={i} style = {liStyle}>{l}</li>
+                        })}
+                    </ul>
+                );
+            }
+        }
+        class pet extends React.Component {
+            render() {
                 return (
                     <div className="card">
                         <h2 className="name">Sup World</h2>
@@ -42,18 +54,7 @@
                             margin:"2px"
                             }}
                         >Hobbis: </h5>
-                        {5 + 5} 
-                        <br/>
-                        {'green ' + 'brown'}
-                        <ul>
-                            <li style = {liStyle}>Sex</li>
-                            <li style = {liStyle}>Anime</li>
-                            <li style = {liStyle}>Coding</li>
-                            <li style = {liStyle}>Eating</li>
-                            <li style = {liStyle}>cooking to Eat</li>
-                            <li style = {liStyle}>Researching new technology</li>
-                            <li style = {liStyle}>Social Media</li>
-                        </ul>
+                        <Hobbies />
                     </div>
                 );
             }
